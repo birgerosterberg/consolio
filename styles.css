@@ -1,0 +1,41 @@
+/* Add your custom styles here */
+
+#terminal-container {
+    display: none;
+}
+
+#boot-up-screen {
+    animation: bootUpAnimation 3s forwards;
+}
+
+@keyframes bootUpAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.terminal-window {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.title-bar {
+    cursor: default;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.buttons > div {
+    height: 8px;
+}
+
+.comma
