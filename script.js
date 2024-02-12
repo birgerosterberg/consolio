@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { text: "Take a moment and relax<span class='animate-[pulse_2s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
             { text: "Take a deep breath... Breathe out<span class='animate-[pulse_4s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
             { text: "A Look and Feel, iamBiOS Experience.", className: "font-bold pt-8 mb-2"},
-            { text: "Best enjoyed as a Desktop Experience.", className: "font-bold pt-8 mb-2"},
+            { text: "Best enjoyed as a Desktop Experience.", className: "font-bold mb-2"},
             { text: "Copyright (C) 2024, iamBiOS.",  className: "font-bold mb-2"},
             { text: "Press <button onclick='simulateEnter()' class='underline text-base hover:opacity-70 sm:text-2xl'>ENTER</button> to open TERMINAL", className: "font-bold mt-auto mb-2" },
         ];
