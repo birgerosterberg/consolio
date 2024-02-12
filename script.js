@@ -101,11 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <li>Database Management: SQL, postgreSQL</li>
                             <li>Cybersecurity: Encryption, Authentication, Penetration Testing, Securing Operating Systems, Threat Management, Bug Bounty</li>
                         </ul>
-                        
-                        <h2 class="text-gray-300 text-xs sm:text-base mb-2">Certifications</h2>
-                        <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
-                            <li>TBA</li>
-                        </ul>
+
                     </div>
                 `,
                 'portfolio.txt': `
