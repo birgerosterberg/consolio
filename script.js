@@ -79,9 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Simulated file system
     const fileSystem = {
-        'file1.txt': 'Content of file1.txt...',
-        'file2.txt': 'Content of file2.txt...',
-        'file3.txt': 'Content of file3.txt...',
         'cv.txt': `
                     <div class="file-content pl-4">
                         <h1 class="text-gray-200 text-sm sm:text-lg mb-2">Birger Österberg</h1>
@@ -111,7 +108,45 @@ document.addEventListener("DOMContentLoaded", function() {
                         </ul>
                     </div>
                 `,
-    };
+                'portfolio.txt': `
+                <div class="file-content pl-4">
+                    <h1 class="text-gray-200 text-sm sm:text-lg mb-2">My Portfolio Projects</h1>
+                    <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
+                        <li style="margin-bottom: 16px;">
+                            <div style="margin-bottom: 4px;">
+                                <a href="https://github.com/birgerosterberg/thechobanalgorithm" class="text-blue-500 hover:underline">The Choban Algorithm</a>
+                            </div>
+                            <div>Fully Responsive pure HTML / CSS project.</div>
+                        </li>
+                        <li style="margin-bottom: 16px;">
+                            <div style="margin-bottom: 4px;">
+                                <a href="https://github.com/birgerosterberg/groovebox" class="text-blue-500 hover:underline">The GrooveBox</a>
+                            </div>
+                            <div>Inspiring GrooveBox made with Vanilla JavaScript and HTML / CSS.</div>
+                        </li>
+                        <li style="margin-bottom: 16px;">
+                            <div style="margin-bottom: 4px;">
+                                <a href="https://github.com/birgerosterberg/riddleme" class="text-blue-500 hover:underline">Riddle Me</a>
+                            </div>
+                            <div>Basic Python terminal project.</div>
+                        </li>
+                        <li style="margin-bottom: 16px;">
+                            <div style="margin-bottom: 4px;">
+                                <a href="https://github.com/birgerosterberg/loopit" class="text-blue-500 hover:underline">Loop It!</a>
+                            </div>
+                            <div>Fullstack Python Django project with JavaScript, postgreSQL, Bootstrap and JQuery. Community platform</div>
+                        </li>
+                        <li style="margin-bottom: 16px;">
+                            <div style="margin-bottom: 4px;">
+                                <a href="https://github.com/birgerosterberg/thebazaar" class="text-blue-500 hover:underline">Sanda Bazaar</a>
+                            </div>
+                            <div>Fullstack Python Django Ecommerce website, with Stripe, postgreSQL, Bootstrap, JavaScript and JQuery.</div>
+                        </li>
+
+                    </ul>
+                </div>
+            `,
+            };
 
     // Function to add a line of text to the terminal
     function addLineToTerminal(text) {
