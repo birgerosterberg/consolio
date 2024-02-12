@@ -146,6 +146,38 @@ document.addEventListener("DOMContentLoaded", function() {
                     </ul>
                 </div>
             `,
+            'contact.txt': `
+                        <div class="file-content pl-4">
+                            <h1 class="text-gray-200 text-sm sm:text-lg mb-2">Contact Information</h1>
+                            <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
+                                <li class="mb-4">
+                                    <div class="mb-1">
+                                        <a href="www.linkedin.com/in/birger-österberg-iambios" class="text-blue-500 hover:underline">LinkedIn Profile</a>
+                                    </div>
+                                    <div class="text-gray-500">Connect on Linkedin!</div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="mb-1">
+                                        <a href="https://github.com/birgerosterberg" class="text-blue-500 hover:underline">GitHub Profile</a>
+                                    </div>
+                                    <div class="text-gray-500">Connect on GitHub lets Co-Create something fun!</div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="mb-1">
+                                        <a href="https://www.hackthebox.eu/home/users/profile/your-hackthebox-profile" class="text-blue-500 hover:underline">Hack The Box Profile</a>
+                                    </div>
+                                    <div class="text-gray-500">Connect on Hack The Box lets learn together!</div>
+                                </li>
+                                <li class="mb-4">
+                                    <div class="mb-1">
+                                        Email: your-email@example.com
+                                    </div>
+                                    <div class="text-gray-500">If you have any questions feel free to send an email!</div>
+                                </li>
+                            </ul>
+                        </div>
+                    `,
+
             };
 
     // Function to add a line of text to the terminal
