@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
             { text: "Take a moment and relax<span class='animate-[pulse_2s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
             { text: "Take a deep breath... Breathe out<span class='animate-[pulse_4s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
             { text: "A Look and Feel, iamBiOS Experience.", className: "font-bold pt-8 mb-2"},
-            { text: "Copyright (C) 1984-2024, iamBiOS.",  className: "font-bold mb-2"},
+            { text: "Best enjoyed as a Desktop Experience.", className: "font-bold pt-8 mb-2"},
+            { text: "Copyright (C) 2024, iamBiOS.",  className: "font-bold mb-2"},
             { text: "Press <button onclick='simulateEnter()' class='underline text-base hover:opacity-70 sm:text-2xl'>ENTER</button> to open TERMINAL", className: "font-bold mt-auto mb-2" },
         ];
 
@@ -87,10 +88,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         
                         <h2 class="text-gray-300 text-xs sm:text-base mb-2">Education</h2>
                         <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
-                            <li>Bachelor of Science in Computer Science, University of Example, 2015-2019</li>
-                            <li>Bachelor of Science in Computer Science, University of Example, 2015-2019</li>
-                            <li>Bachelor of Science in Computer Science, University of Example, 2015-2019</li>
-                            <li>Bachelor of Science in Computer Science, University of Example, 2015-2019</li>
+                            <li>RedCross Community College, Sustainable Leadership, 2016-2017</li>
+                            <li>Sundsgården Community College, Front-end Developer, 2022-2023</li>
+                            <li>CodeInstitute, Diploma in Fullstack Software Development 2023-2024</li>
+                            <li>EC-Utbildning, IT-Cybersecurity Developer 2023-2025</li>
                         </ul>
                                     
                         <h2 class="text-gray-300 text-xs sm:text-base mb-2">Skills</h2>
@@ -103,8 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         
                         <h2 class="text-gray-300 text-xs sm:text-base mb-2">Certifications</h2>
                         <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
-                            <li>Certified Ethical Hacker (CEH)</li>
-                            <li>AWS Certified Developer - Associate</li>
+                            <li>TBA</li>
                         </ul>
                     </div>
                 `,
@@ -114,31 +114,31 @@ document.addEventListener("DOMContentLoaded", function() {
                     <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
                         <li style="margin-bottom: 16px;">
                             <div style="margin-bottom: 4px;">
-                                <a href="https://github.com/birgerosterberg/thechobanalgorithm" class="text-blue-500 hover:underline">The Choban Algorithm</a>
+                                <a href="https://github.com/birgerosterberg/thechobanalgorithm" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">The Choban Algorithm</a>
                             </div>
                             <div>Fully Responsive pure HTML / CSS project.</div>
                         </li>
                         <li style="margin-bottom: 16px;">
                             <div style="margin-bottom: 4px;">
-                                <a href="https://github.com/birgerosterberg/groovebox" class="text-blue-500 hover:underline">The GrooveBox</a>
+                                <a href="https://github.com/birgerosterberg/groovebox" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">The GrooveBox</a>
                             </div>
                             <div>Inspiring GrooveBox made with Vanilla JavaScript and HTML / CSS.</div>
                         </li>
                         <li style="margin-bottom: 16px;">
                             <div style="margin-bottom: 4px;">
-                                <a href="https://github.com/birgerosterberg/riddleme" class="text-blue-500 hover:underline">Riddle Me</a>
+                                <a href="https://github.com/birgerosterberg/riddleme" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Riddle Me</a>
                             </div>
                             <div>Basic Python terminal project.</div>
                         </li>
                         <li style="margin-bottom: 16px;">
                             <div style="margin-bottom: 4px;">
-                                <a href="https://github.com/birgerosterberg/loopit" class="text-blue-500 hover:underline">Loop It!</a>
+                                <a href="https://github.com/birgerosterberg/loopit" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Loop It!</a>
                             </div>
                             <div>Fullstack Python Django project with JavaScript, postgreSQL, Bootstrap and JQuery. Community platform</div>
                         </li>
                         <li style="margin-bottom: 16px;">
                             <div style="margin-bottom: 4px;">
-                                <a href="https://github.com/birgerosterberg/thebazaar" class="text-blue-500 hover:underline">Sanda Bazaar</a>
+                                <a href="https://github.com/birgerosterberg/thebazaar" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Sanda Bazaar</a>
                             </div>
                             <div>Fullstack Python Django Ecommerce website, with Stripe, postgreSQL, Bootstrap, JavaScript and JQuery.</div>
                         </li>
@@ -152,27 +152,21 @@ document.addEventListener("DOMContentLoaded", function() {
                             <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
                                 <li class="mb-4">
                                     <div class="mb-1">
-                                        <a href="www.linkedin.com/in/birger-österberg-iambios" class="text-blue-500 hover:underline">LinkedIn Profile</a>
+                                        <a href="https://www.linkedin.com/in/birger-österberg-iambios" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">LinkedIn Profile</a>
                                     </div>
                                     <div class="text-gray-500">Connect on Linkedin!</div>
                                 </li>
                                 <li class="mb-4">
                                     <div class="mb-1">
-                                        <a href="https://github.com/birgerosterberg" class="text-blue-500 hover:underline">GitHub Profile</a>
+                                        <a href="https://github.com/birgerosterberg" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">GitHub Profile</a>
                                     </div>
                                     <div class="text-gray-500">Connect on GitHub lets Co-Create something fun!</div>
                                 </li>
                                 <li class="mb-4">
                                     <div class="mb-1">
-                                        <a href="https://www.hackthebox.eu/home/users/profile/your-hackthebox-profile" class="text-blue-500 hover:underline">Hack The Box Profile</a>
+                                        <a href="mailto:birger@iambios.com" class="text-blue-500 hover:underline">Email: birger@iambios.com</a>
                                     </div>
-                                    <div class="text-gray-500">Connect on Hack The Box lets learn together!</div>
-                                </li>
-                                <li class="mb-4">
-                                    <div class="mb-1">
-                                        Email: your-email@example.com
-                                    </div>
-                                    <div class="text-gray-500">If you have any questions feel free to send an email!</div>
+                                    <div class="text-gray-500">Send me an email if you have any questions!</div>
                                 </li>
                             </ul>
                         </div>
