@@ -1,3 +1,10 @@
+function simulateEnter() {
+    const event = new KeyboardEvent('keydown', {
+        key: 'Enter'
+    });
+    document.dispatchEvent(event);
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     // Function to create and display boot-up sequence
     function createBootUpSequence() {
@@ -14,14 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Text elements with their respective classes
         const bootUpText = [
-            { text: "Welcome to iamBiOS v1.1", className: "text-xl lg:text-3xl font-bold text-white mb-2" },
+            { text: "<button class='animate-spin' disabled>~</button> Welcome to iamBiOS <button class='animate-spin' disabled>~</button>", className: "text-xl lg:text-3xl font-bold text-white mb-2" },
             { text: "Portfolio by Birger Österberg", className: "font-bold mb-2" },
             { text: "Version 1.1", className: "font-bold mb-2" },
             { text: "Webserver Running at 10GBit.", className: "font-bold mb-2" },
             { text: "Patience Test:", className: "font-bold mb-2" },
-            { text: "Take a moment and relax", className: "font-bold mb-2" },
-            { text: "Take a deep breath... Breathe out.", className: "font-bold mb-2" },
-            { text: "Press ENTER to open TERMINAL", className: "font-bold mt-auto mb-2" },
+            { text: "Take a moment and relax<span class='animate-[pulse_2s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
+            { text: "Take a deep breath... Breathe out<span class='animate-[pulse_4s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
+            { text: "A Look and Feel, iamBiOS Experience.", className: "font-bold pt-8 mb-2"},
+            { text: "Copyright (C) 1984-2024, iamBiOS.",  className: "font-bold mb-2"},  
+            { text: "Press <button onclick='simulateEnter()' class='underline text-base hover:opacity-70 sm:text-2xl'>ENTER</button> to open TERMINAL", className: "font-bold mt-auto mb-2" },
         ];
 
         const addTextWithDelay = (index) => {
@@ -33,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 bootUpElement.innerHTML = bootUpText[index].text;
                 bootUpContainer.appendChild(bootUpElement);
                 scrollToBottom();
-            }, index * 1800); // Delay each line by 1 second
+            }, index * 500); // Delay each line by 1.8 seconds
         };
 
         for (let i = 0; i < bootUpText.length; i++) {
@@ -56,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     bootScreen.remove();
                     document.getElementById('terminal-container').style.display = 'block';
                     document.getElementById('command-input').focus();
-                }, 3000);
+                }, 3000); // Delay for 3 seconds before showing terminal
             }
         });
     }
