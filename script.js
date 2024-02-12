@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { text: "<button class='animate-spin' disabled>~</button> Welcome to iamBiOS <button class='animate-spin' disabled>~</button>", className: "text-xl lg:text-3xl font-bold text-white mb-2" },
             { text: "Portfolio by Birger Österberg", className: "font-bold mb-2" },
             { text: "Version 1.1", className: "font-bold mb-2" },
-            { text: "Webserver Running at 10GBit.", className: "font-bold mb-2" },
+            { text: "Webserver Running nginx 1.25 @ 10GBit.", className: "font-bold mb-2" },
             { text: "Patience Test:", className: "font-bold mb-2" },
             { text: "Take a moment and relax<span class='animate-[pulse_2s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
             { text: "Take a deep breath... Breathe out<span class='animate-[pulse_4s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
