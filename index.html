@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Portfolio Terminal</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-900 text-white font-mono">
-    <div id="boot-up-screen" class="flex items-center justify-center h-screen">
-        <div id="boot-up-text" class="text-4xl">Booting up...</div>
-    </div>
 
-    <div id="terminal-container" class="hidden">
-        <div class="border border-gray-700 rounded-lg overflow-hidden">
-            <div class="p-4 h-80 overflow-y-auto" id="terminal-body"></div>
-            <div class="bg-gray-800 p-4">
-                <span class="text-gray-400">$</span>
-                <input type="text" id="command-input" class="bg-transparent focus:outline-none text-white w-full">
+<body class="bg-gray-900 text-white font-mono overflow-hidden">
+    <div id="terminal-container" class="hidden flex items-center justify-center h-screen">
+        <div class="terminal-window w-11/12 border border-gray-700 rounded-lg overflow-hidden">
+            <div class="title-bar bg-gray-800 p-2 flex items-center justify-between">
+                <div class="buttons flex">
+                    <div class="close-button bg-red-500 h-2 w-2 rounded-full mx-1"></div>
+                    <div class="minimize-button bg-yellow-500 h-2 w-2 rounded-full mx-1"></div>
+                    <div class="maximize-button bg-green-500 h-2 w-2 rounded-full mx-1"></div>
+                </div>
+                <div class="title">Portfolio Terminal</div>
+            </div>
+            <div class="p-4 h-96 sm:h-80 overflow-y-auto" id="terminal-body"></div>
+            <div class="bg-gray-800 p-4 flex items-center">
+                <span class="text-gray-400 mr-2">$</span>
+                <div class="flex">
+                    <input type="text" id="command-input" class="bg-transparent focus:outline-none text-white flex-grow">
+                </div>
             </div>
         </div>
     </div>
     
     <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </body>
 </html>

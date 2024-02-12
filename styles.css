@@ -1,9 +1,5 @@
 /* Add your custom styles here */
 
-#terminal-container {
-    display: none;
-}
-
 #boot-up-screen {
     animation: bootUpAnimation 3s forwards;
 }
@@ -19,23 +15,17 @@
 }
 
 .terminal-window {
-    width: 80%;
     max-width: 800px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .title-bar {
-    cursor: default;
+    cursor: pointer;
 }
 
-.buttons {
-    display: flex;
-    align-items: center;
+.cursor {
+    animation: blink-animation 1s infinite;
 }
 
-.buttons > div {
-    height: 8px;
-}
-
-.comma
