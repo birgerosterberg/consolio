@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
             { text: "Take a moment and relax<span class='animate-[pulse_2s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
             { text: "Take a deep breath... Breathe out<span class='animate-[pulse_4s_ease-in-out_infinite] font-extrabold text-3xl'>.</span>", className: "pl-3 xl:pl-8 font-bold mb-2" },
             { text: "A Look and Feel, iamBiOS Experience.", className: "font-bold pt-8 mb-2"},
-            { text: "Copyright (C) 1984-2024, iamBiOS.",  className: "font-bold mb-2"},  
+            { text: "Copyright (C) 1984-2024, iamBiOS.",  className: "font-bold mb-2"},
             { text: "Press <button onclick='simulateEnter()' class='underline text-base hover:opacity-70 sm:text-2xl'>ENTER</button> to open TERMINAL", className: "font-bold mt-auto mb-2" },
         ];
 
@@ -82,7 +82,35 @@ document.addEventListener("DOMContentLoaded", function() {
         'file1.txt': 'Content of file1.txt...',
         'file2.txt': 'Content of file2.txt...',
         'file3.txt': 'Content of file3.txt...',
-        'cv.txt': 'Content of cv.txt...',
+        'cv.txt': `
+                    <div class="file-content pl-4">
+                        <h1 class="text-gray-200 text-sm sm:text-lg mb-2">Birger Österberg</h1>
+                        <h2 class="text-gray-300 text-xs sm:text-base mb-2">Summary</h2>
+                        <p class="text-gray-400 text-xs sm:text-base pl-4 mb-4">Fullstack Web Developer and Cybersecurity Developer, skilled in frontend and backend development, Linux and Windows server management, Azure and AWS cloud management. Versatile in Python, JavaScript, HTML/CSS, React, Django, and more.</p>
+                        
+                        <h2 class="text-gray-300 text-xs sm:text-base mb-2">Education</h2>
+                        <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
+                            <li>Bachelor of Science in Computer Science, University of Example, 2015-2019</li>
+                            <li>Bachelor of Science in Computer Science, University of Example, 2015-2019</li>
+                            <li>Bachelor of Science in Computer Science, University of Example, 2015-2019</li>
+                            <li>Bachelor of Science in Computer Science, University of Example, 2015-2019</li>
+                        </ul>
+                                    
+                        <h2 class="text-gray-300 text-xs sm:text-base mb-2">Skills</h2>
+                        <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
+                            <li>Programming Languages: JavaScript, Python, Shell Scripting</li>
+                            <li>Web Development: HTML, S/CSS, React, Django</li>
+                            <li>Database Management: SQL, postgreSQL</li>
+                            <li>Cybersecurity: Encryption, Authentication, Penetration Testing, Securing Operating Systems, Threat Management, Bug Bounty</li>
+                        </ul>
+                        
+                        <h2 class="text-gray-300 text-xs sm:text-base mb-2">Certifications</h2>
+                        <ul class="text-gray-400 pl-4 text-xs sm:text-base mb-4">
+                            <li>Certified Ethical Hacker (CEH)</li>
+                            <li>AWS Certified Developer - Associate</li>
+                        </ul>
+                    </div>
+                `,
     };
 
     // Function to add a line of text to the terminal
@@ -107,21 +135,35 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to display the greeting message in the terminal
     function displayGreeting() {
         addLineToTerminal("Welcome to the portfolio of Birger Österberg.");
-        addLineToTerminal("Fullstack web developer and Cybersecurity Developer.");
-        addLineToTerminal("This is a scaled down terminal with a few commands that work.");
-        addLineToTerminal("Use 'ls' to list files and 'cat <filename>' to view them.");
+        addLineToTerminal("I am a full-stack web developer and cybersecurity developer.");
+        addLineToTerminal("This is a scaled-down terminal with a few available commands.");
+        addLineToTerminal("To use this terminal, simply enter your command on the line marked with a > sign.");
+        addLineToTerminal("Type the command 'man' and press enter to see the list of available commands through the manual.");
     }
 
     // Function to handle the ls command
     function listFiles() {
         const files = Object.keys(fileSystem);
-        addLineToTerminal(files.join(' '));
+        files.forEach(file => {
+            const fileLine = document.createElement("div");
+            fileLine.classList.add("pl-4", "text-gray-400", "text-xs", "sm:text-base"); // Add left padding
+            fileLine.textContent = file;
+            terminalBody.appendChild(fileLine); // Append directly to terminal body
+        });
+        scrollToBottom(); // Ensure scrolling to the bottom after adding all files
     }
 
     // Function to handle the cat command
     function viewFile(filename) {
         if (fileSystem.hasOwnProperty(filename)) {
-            addLineToTerminal(fileSystem[filename]);
+            const fileContent = fileSystem[filename];
+            const fileContainer = document.createElement("div");
+            fileContainer.innerHTML = fileContent.trim(); // Trim to remove extra spaces
+            fileContainer.querySelectorAll("ul").forEach(ul => {
+                ul.classList.add("pl-4", "text-gray-400", "text-xs", "sm:text-base"); // Add left padding to each ul
+            });
+            terminalBody.appendChild(fileContainer); // Append file content to terminal body
+            scrollToBottom(); // Scroll to the bottom after appending file content
         } else {
             addLineToTerminal(`Error: '${filename}' not found.`);
         }
@@ -133,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const command = inputField.value.trim();
 
             // Display the command in the terminal body
-            addLineToTerminal(`$ ${command}`);
+            addLineToTerminal(`> ${command}`);
 
             // Clear the input field
             inputField.value = '';
@@ -141,11 +183,11 @@ document.addEventListener("DOMContentLoaded", function() {
             // Check if the command is a valid command
             if (command.toLowerCase() === 'clear') {
                 clearTerminal();
-            } else if (command.toLowerCase() === 'help') {
+            } else if (command.toLowerCase() === 'man') {
                 // Display help message
                 addLineToTerminal("Available commands:");
                 addLineToTerminal("- clear: Clear the terminal");
-                addLineToTerminal("- help: Display this help message");
+                addLineToTerminal("- man: Display the manual for the Terminal");
                 addLineToTerminal("- ls: List files");
                 addLineToTerminal("- cat <filename>: View file content");
             } else if (command.toLowerCase() === 'ls') {
@@ -159,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             } else {
                 // Display error message for unknown command
-                addLineToTerminal(`Error: '${command}' is not a valid command. Type 'help' for available commands.`);
+                addLineToTerminal(`Error: '${command}' is not a valid command. Type 'man' for available commands.`);
             }
         }
     });
